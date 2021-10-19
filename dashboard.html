@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Welcome back, {{session.get('name')}}</h1>
+{% include 'includes/_messages.html' %}
+<p></p>
+
+<p> Your current balance is {{ balance }} SHK</p>
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-chart-area"></i>
+    Price of Shockwave (SHK)</div>
+  <div class="card-body">
+    <canvas id="myAreaChart" width="100%" height="30"></canvas>
+  </div>
+  <div class="card-footer small text-muted">Updated today at {{ct}}</div>
+</div>
+
+<!-- DataTables Example -->
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-table"></i>
+    Blockchain</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Transaction</th>
+            <th>Hash</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>#</th>
+            <th>Transaction</th>
+            <th>Hash</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for block in blockchain %}
+            <tr>
+              <td>{{block.number}}</td>
+              <td>{{block.data}}</td>
+              <td>{{block.hash()}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card-footer small text-muted">Updated today at {{ct}}</div>
+</div>
+{% endblock %}
