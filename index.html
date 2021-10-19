@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- ADAPTED FROM TEMPLATE at https://unpkg.com/-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shockwave</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link rel="stylesheet" href="/static/dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+
+<body class="is-boxed has-animations" style="height: 100%;">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+                                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Shockwave</title>
+                                    <defs>
+                                        <radialGradient cy="0%" fx="50%" fy="0%" r="100%" id="logo-gradient">
+                                            <stop stop-color="#FFF" offset="0%"></stop>
+                                            <stop stop-color="#FFF" stop-opacity=".24" offset="100%"></stop>
+                                        </radialGradient>
+                                    </defs>
+                                    <path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zm0-10a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" fill="url(#logo-gradient)" fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </h1>
+                    </div>
+                    <ul class="header-links list-reset m-0">
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                        <li>
+                            <a class="button button-sm button-shadow" href="/register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero text-light text-center">
+                <div class="container-sm">
+                    <div class="hero-inner">
+                        <h1 class="hero-title h2-mobile mt-0 is-revealing" style="visibility: visible;">Shockwave (SHK) Cryptocurrency</h1>
+                        <p class="hero-paragraph is-revealing" style="visibility: visible;">Shockwave is a cyrptocurrency implemented using python and flask. We simplify the use of sending money by our user-friendly interface and efficient servers.</p>
+                        <p class="hero-cta is-revealing" style="visibility: visible;"><a class="button button-secondary button-shadow" href="/register">Get started now</a></p>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+
+            </div>
+        </footer>
+    </div>
+    <script src="/static/dist/js/main.min.js"></script>
+
+</body>
+</html>
