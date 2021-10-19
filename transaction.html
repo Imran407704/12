@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% include 'includes/_messages.html' %}
+<p>Your current balance is {{ balance }} SHK</p>
+{% from "includes/_formhelpers.html" import render_field %}
+<form method="POST" action="">
+  <div class="from-group">
+    {{render_field(form.username, class_="form-control")}}
+  </div>
+  <div class="from-group">
+    {{render_field(form.amount, class_="form-control")}}
+  </div>
+  </br>
+  <p><input type="submit" class="btn btn-primary" value="Send"></p>
+</form>
+{% endblock %}
